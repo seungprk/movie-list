@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MovieList from './MovieList.jsx';
+import Search from './Search.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class App extends React.Component {
         <header>
           <h1>The Best Movie List Around</h1>
         </header>
+        <Search />
         <MovieList movies={this.state.movies} />
       </div>
     );
