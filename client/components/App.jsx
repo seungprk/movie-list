@@ -18,13 +18,17 @@ class App extends React.Component {
     };
   }
 
+  searchMovie() {
+    console.log('movie!');
+  }
+
   render() {
     return (
       <div>
         <header>
           <h1>The Best Movie List Around</h1>
         </header>
-        <Search />
+        <Search onSearchMovie={this.searchMovie.bind(this)} />
         <MovieList movies={this.state.movies} />
       </div>
     );

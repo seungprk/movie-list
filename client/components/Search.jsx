@@ -5,15 +5,16 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { value: '' };
+    this.state = { query: '' };
   }
 
   handleSubmit(event) {
     event.preventDefault();
+    this.props.onSearchMovie(this.state.query);
   }
 
   handleChange(event) {
-    this.setState({ value: event.target.value });
+    this.setState({ query: event.target.value });
   }
 
   render() {
@@ -21,7 +22,7 @@ class Search extends React.Component {
       <form onSubmit={this.handleSubmit.bind(this)}>
         <input 
           type="text" 
-          value={this.state.value} 
+          value={this.state.query} 
           onChange={this.handleChange.bind(this)} 
         />
         <button>Search</button>
