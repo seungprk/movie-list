@@ -91,7 +91,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nvar MovieList = props => {\n  return props.movies.map(movie => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n    'div',\n    null,\n    'movie!'\n  ));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MovieList);\n\n//# sourceURL=webpack:///./client/components/MovieList.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _MovieListEntry_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MovieListEntry.jsx */ \"./client/components/MovieListEntry.jsx\");\n\n\n\n\nvar MovieList = props => {\n  return props.movies.map(movie => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MovieListEntry_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], { movie: movie }));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MovieList);\n\n//# sourceURL=webpack:///./client/components/MovieList.jsx?");
+
+/***/ }),
+
+/***/ "./client/components/MovieListEntry.jsx":
+/*!**********************************************!*\
+  !*** ./client/components/MovieListEntry.jsx ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nvar MovieListEntry = props => {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n    'div',\n    null,\n    props.movie.title\n  );\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MovieListEntry);\n\n//# sourceURL=webpack:///./client/components/MovieListEntry.jsx?");
 
 /***/ }),
 

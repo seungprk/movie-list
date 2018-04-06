@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MovieListEntry from './MovieListEntry.jsx';
 
 var MovieList = (props) => {
   return (
-    props.movies.map(movie => <div>movie!</div>)
+    props.movies.map(movie => <MovieListEntry movie={movie} />)
   );
 };
 
