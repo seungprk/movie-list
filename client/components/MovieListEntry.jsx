@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 var MovieListEntry = (props) => {
   return (
-    <div>{props.movie.title}</div>
+    <div className="movie-list-entry">{props.movie.title}</div>
   );
 };
 
