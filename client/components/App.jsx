@@ -8,18 +8,18 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      movies: [
-        {title: 'Mean Girls'},
-        {title: 'Hackers'},
-        {title: 'The Grey'},
-        {title: 'Sunshine'},
-        {title: 'Ex Machina'},
-      ]
+      movies: props.movies
     };
   }
 
-  searchMovie() {
-    console.log('movie!');
+  searchMovie(query) {
+    var lowCaseQuery = query.toLowerCase();
+    var filteredArr = this.props.movies.filter(movie => {
+      return movie.title.toLowerCase().includes(lowCaseQuery);
+    });
+    this.setState({ 
+      movies: filteredArr
+    });
   }
 
   render() {
