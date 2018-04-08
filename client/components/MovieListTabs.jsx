@@ -1,10 +1,14 @@
 import React from 'react';
 
-var MovieListTabs = () => {
+var MovieListTabs = (props) => {
+  var handleClick = (e) => {
+    props.onSwitchTab(e.target.textContent);
+  };
+
   return (
     <div>
-      <span>Tab 1</span>
-      <span>Tab 2</span>
+      <span className={props.selected === 'Watched' ? 'selected' : ''} onClick={handleClick}>Watched</span>
+      <span className={props.selected === 'To Watch' ? 'selected' : ''} onClick={handleClick}>To Watch</span>
     </div>
   );
 };
