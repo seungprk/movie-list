@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-    let movies = [
+    const movies = [
       {title: 'Mean Girls'},
       {title: 'Hackers'},
       {title: 'The Grey'},
@@ -17,17 +17,15 @@ class App extends React.Component {
     ];
 
     this.state = {
-      movies: movies
+      movies: movies,
+      filterBy: ''
     };
   }
 
   searchMovie(query) {
     const lowCaseQuery = query.toLowerCase();
-    let filteredArr = this.state.movies.filter(movie => {
-      return movie.title.toLowerCase().includes(lowCaseQuery);
-    });
     this.setState({ 
-      movies: filteredArr
+      filterBy: lowCaseQuery
     });
   }
 
@@ -38,6 +36,13 @@ class App extends React.Component {
   }
 
   render() {
+    let filteredMovies = this.state.movies;
+    if (this.state.filterBy) {
+      filteredMovies = this.state.movies.filter(movie => {
+        return movie.title.toLowerCase().includes(this.state.filterBy);
+      });
+    }
+
     return (
       <div>
         <header>
@@ -45,7 +50,7 @@ class App extends React.Component {
         </header>
         <AddMovie onAddMovie={this.addMovie.bind(this)} />
         <Search onSearchMovie={this.searchMovie.bind(this)} />
-        <MovieList movies={this.state.movies} />
+        <MovieList movies={filteredMovies} />
       </div>
     );
   }
