@@ -18,7 +18,8 @@ class MovieList extends React.Component {
   }
 
   render() {
-    var entries = this.props.movies.map(movie => <MovieListEntry movie={movie} />);
+    var movies = this.props.movies.filter(movie => this.state.tab === 'Watched' ? movie.watched : !movie.watched);
+    var entries = movies.map(movie => <MovieListEntry movie={movie} />);
     if (entries.length === 0) {
       entries = <div>Movie Not Found...</div>;
     }
