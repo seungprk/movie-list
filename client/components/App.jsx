@@ -23,7 +23,7 @@ class App extends React.Component {
 
   searchMovie(query) {
     const lowCaseQuery = query.toLowerCase();
-    let filteredArr = this.props.movies.filter(movie => {
+    let filteredArr = this.state.movies.filter(movie => {
       return movie.title.toLowerCase().includes(lowCaseQuery);
     });
     this.setState({ 
