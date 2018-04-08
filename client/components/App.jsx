@@ -7,17 +7,8 @@ import AddMovie from './AddMovie.jsx';
 class App extends React.Component {
   constructor(props) {
     super(props);
-
-    const movies = [
-      {title: 'Mean Girls'},
-      {title: 'Hackers'},
-      {title: 'The Grey'},
-      {title: 'Sunshine'},
-      {title: 'Ex Machina'},
-    ];
-
     this.state = {
-      movies: movies,
+      movies: [],
       filterBy: ''
     };
   }
