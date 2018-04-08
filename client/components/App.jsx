@@ -21,8 +21,16 @@ class App extends React.Component {
   }
 
   addMovie(title) {
-    let movies = this.state.movies.map(movie => ({ title: movie.title }));
-    movies.push({ title: title });
+    let movies = this.state.movies.map(movie => {
+      return { 
+        title: movie.title,
+        watched: movie.watched
+      };
+    });
+    movies.push({ 
+      title: title,
+      watched: false
+    });
     this.setState({ movies: movies });
   }
 
