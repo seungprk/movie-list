@@ -7,7 +7,7 @@ var MovieListEntry = (props) => {
   return (
     <div className="movie-list-entry">
       <span>{props.movie.title}</span>
-      <span>{watchedText}</span>
+      <button onClick={() => props.onToggleWatched(props.movie.title)}>{watchedText}</button>
     </div>
   );
 };

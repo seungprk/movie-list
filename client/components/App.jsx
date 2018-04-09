@@ -29,8 +29,14 @@ class App extends React.Component {
     this.setState({ movies: movies });
   }
   
-  toggleMovieWatched(title) {
-   
+  toggleWatched(title) {
+    let movies = this.state.movies.slice();
+    let index = movies.findIndex(movie => movie.title === title);
+    movies[index] = {
+      title: movies[index].title,
+      watched: !movies[index].watched
+    };
+    this.setState({ movies: movies });
   }
 
   render() {
@@ -48,7 +54,7 @@ class App extends React.Component {
         </header>
         <AddMovie onAddMovie={this.addMovie.bind(this)} />
         <Search onSearchMovie={this.searchMovie.bind(this)} />
-        <MovieList movies={filteredMovies} />
+        <MovieList movies={filteredMovies} onToggleWatched={this.toggleWatched.bind(this)} />
       </div>
     );
   }
