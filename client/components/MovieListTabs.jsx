@@ -1,6 +1,6 @@
 import React from 'react';
 
-var MovieListTabs = (props) => {
+const MovieListTabs = (props) => {
   var handleClick = (e) => {
     props.onSwitchTab(e.target.textContent);
   };

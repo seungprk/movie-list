@@ -28,6 +28,10 @@ class App extends React.Component {
     });
     this.setState({ movies: movies });
   }
+
+  queryMovie(title) {
+    // TODO
+  }
   
   toggleWatched(title) {
     let movies = this.state.movies.slice();

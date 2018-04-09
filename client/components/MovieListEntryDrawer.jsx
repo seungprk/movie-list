@@ -1,6 +1,6 @@
 import React from 'react';
 
-var MovieListEntryDrawer = (props) => {
+const MovieListEntryDrawer = (props) => {
   return (
     <div className="entry-drawer">
       <div className="entry-drawer-info">
