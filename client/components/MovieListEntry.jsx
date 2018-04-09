@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import MovieListEntryDrawer from './MovieListEntryDrawer.jsx';
 
 var MovieListEntry = (props) => {
   return (

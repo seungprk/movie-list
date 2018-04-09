@@ -8,8 +8,9 @@ var MovieListEntryDrawer = (props) => {
         <div>{props.movie.runtime}</div>
         <div>{props.movie.metascore}</div>
         <div>{props.movie.imdbrating}</div>
-        <div>{props.movie.watched ? 'watched' : 'not watched'}</div>
-        <button onClick={() => props.onToggleWatched(props.movie.title)}>{watchedText}</button>
+        <button onClick={() => props.onToggleWatched(props.movie.title)}>
+          {props.movie.watched ? 'watched' : 'not watched'}
+        </button>
       </div>
       <img src={props.movie.imgUrl} />
     </div>
