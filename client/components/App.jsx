@@ -21,17 +21,16 @@ class App extends React.Component {
   }
 
   addMovie(title) {
-    let movies = this.state.movies.map(movie => {
-      return { 
-        title: movie.title,
-        watched: movie.watched
-      };
-    });
+    let movies = this.state.movies.slice();
     movies.push({ 
       title: title,
       watched: false
     });
     this.setState({ movies: movies });
+  }
+  
+  toggleMovieWatched(title) {
+   
   }
 
   render() {
