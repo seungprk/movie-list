@@ -1,7 +1,7 @@
 import React from 'react';
 import MovieListEntryDrawer from './MovieListEntryDrawer.jsx';
 
-var MovieListEntry = (props) => {
+const MovieListEntry = (props) => {
   return (
     <div className="movie-list-entry">
       <div>{props.movie.title}</div>
